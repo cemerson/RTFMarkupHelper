@@ -82,13 +82,18 @@ namespace RTFMarkupHelper
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // default/example RTF (direct from SLO project 20160317.01)
+            // default/example RTF 
             rtfBox.Rtf = @"{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fswiss\fprq2\fcharset0 Franklin Gothic Book;}{\f1\froman\fprq2\fcharset0 Times New Roman;}}\viewkind4\uc1\pard\sl276\slmult1\lang1033\b\f0\fs22 Header 1\f1\par\b0\f0 This is a paragraph of text. This is a paragraph of text.This is a paragraph of text. This is a paragraph of text. This is a paragraph of text. This is a paragraph of text. This is a paragraph of text. This is a paragraph of text.\par\par\b Cabecera 2\par\b0 es un p\'e1rrafo de texto. Este es un p\'e1rrafo de text.This es un p\'e1rrafo de texto. Este es un p\'e1rrafo de texto. Este es un p\'e1rrafo de texto. Este es un p\'e1rrafo de texto. Este es un p\'e1rrafo de texto. Este es un p\'e1rrafo de texto.\par}";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             textBox.Text = rtfBox.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
