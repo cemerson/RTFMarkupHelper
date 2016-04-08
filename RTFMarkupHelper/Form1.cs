@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,22 @@ namespace RTFMarkupHelper
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Rich Text File|*.rtf";
+            sfd.DefaultExt = "rtf";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.OpenFile()))
+                {
+                    sw.Write(textBox.Text);
+                    sw.Flush();
+                    sw.Close();
+                }
+            }
         }
     }
 }
