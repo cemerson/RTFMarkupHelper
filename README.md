@@ -5,4 +5,4 @@
 
 RTF Spec (Wikipedia): https://en.wikipedia.org/wiki/Rich_Text_Format
 
-![screenshot](https://c2.staticflickr.com/2/1655/26221132402_e61b4522b8_b.jpg "Screenshot")
+![screenshot](https://c2.staticflickr.com/2/1572/25787588633_db5e2f1306_z.jpg "Screenshot")
