@@ -170,16 +170,47 @@ namespace RTFMarkupHelper
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			if (rtfBox.SelectionCharOffset > 0)
-			{
-				rtfBox.SelectionCharOffset = 0;
-				rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size + 4);
-			}
-			else
-			{
-				rtfBox.SelectionCharOffset = 4;
-				rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size - 4);
-			}
+
+            //////////string updatedRTFString;
+
+            //////////string fullRTFText = rtfBox.Rtf.ToString(); //.SelectedText;
+            //////////string fullRTFPlainText = rtfBox.Text;
+            //////////string rtfTextToSuperScript = rtfBox.SelectedText;            
+            //////////string rtfTextSuperScripted = @"\super " + rtfTextToSuperScript + @"\nosupersub ";
+
+            ////////////string updatedRTFText = fullRTFText.Replace(rtfTextToSuperScript, rtfTextSuperScripted);  //            
+            ////////////string updatedRTFPlainText = fullRTFText.Replace(rtfTextToSuperScript, rtfTextSuperScripted);  //            
+            //////////// rtfBox.Rtf = updatedRTFText;
+            //////////// rtfBox.Rtf = fullRTFText.Replace(fullRTFPlainText, updatedRTFPlainText);
+            //////////int selectedRTFTextPosition = rtfBox.SelectionStart;            
+            //////////int selectedRTFTextLength = rtfBox.SelectionLength;
+            //////////int selectedRTFTextPositionEnd = rtfBox.SelectionStart + selectedRTFTextLength;
+
+            //////////int updatedRTFSelectionLength = rtfTextSuperScripted.Length;
+            //////////int positionOfRTFTextAfterSuperScriptedText = selectedRTFTextPositionEnd + updatedRTFSelectionLength;
+
+            //////////string updatedRTFPlainText = fullRTFPlainText.Substring(0, selectedRTFTextPosition) + 
+            //////////                        rtfTextSuperScripted +
+            //////////                        fullRTFPlainText.Substring(selectedRTFTextPositionEnd);
+
+            ////////////updatedRTFText = fullRTFText.Substring(0, selectedRTFTextPosition) + rtfTextSuperScripted +
+            ////////////      fullRTFText.Substring(selectedRTFTextLength);
+
+            //////////// rtfBox.Rtf = updatedRTFText;
+            //////////string updatedRTFText = fullRTFText.Replace(fullRTFPlainText, updatedRTFPlainText);
+            //////////rtfBox.Rtf = updatedRTFText;
+
+
+            if (rtfBox.SelectionCharOffset > 0)
+            {
+                rtfBox.SelectionCharOffset = 0;
+                // rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size + 4);
+            }
+            else
+            {
+                rtfBox.SelectionCharOffset = 4;
+                // rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size - 4);
+            }
 			
 		}
 

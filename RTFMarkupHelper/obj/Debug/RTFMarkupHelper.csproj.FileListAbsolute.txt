@@ -6,12 +6,12 @@ C:\Projects\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.Properties
 C:\Projects\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.csproj.GenerateResource.Cache
 C:\Projects\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.exe
 C:\Projects\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.pdb
+C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\bin\Debug\RTFMarkupHelper.exe
 C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\bin\Debug\RTFMarkupHelper.exe.config
-C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.exe
-C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.pdb
-C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.csprojResolveAssemblyReference.cache
 C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.Form1.resources
 C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.Properties.Resources.resources
 C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.csproj.GenerateResource.Cache
-C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\bin\Debug\RTFMarkupHelper.exe
+C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.exe
+C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.pdb
 C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\bin\Debug\RTFMarkupHelper.pdb
+C:\Projects\Tools_and_Tests\RTFMarkupHelper\RTFMarkupHelper\obj\Debug\RTFMarkupHelper.csprojResolveAssemblyReference.cache

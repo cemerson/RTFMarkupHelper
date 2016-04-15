@@ -42,7 +42,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.formatBold = new System.Windows.Forms.Button();
             this.formatItalic = new System.Windows.Forms.Button();
             this.formatUnderline = new System.Windows.Forms.Button();
@@ -188,21 +187,10 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(368, 50);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(51, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Super";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // formatBold
             // 
             this.formatBold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formatBold.Location = new System.Drawing.Point(300, 50);
+            this.formatBold.Location = new System.Drawing.Point(344, 50);
             this.formatBold.Name = "formatBold";
             this.formatBold.Size = new System.Drawing.Size(22, 23);
             this.formatBold.TabIndex = 14;
@@ -213,7 +201,7 @@
             // formatItalic
             // 
             this.formatItalic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formatItalic.Location = new System.Drawing.Point(323, 50);
+            this.formatItalic.Location = new System.Drawing.Point(367, 50);
             this.formatItalic.Name = "formatItalic";
             this.formatItalic.Size = new System.Drawing.Size(20, 23);
             this.formatItalic.TabIndex = 15;
@@ -224,7 +212,7 @@
             // formatUnderline
             // 
             this.formatUnderline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formatUnderline.Location = new System.Drawing.Point(344, 50);
+            this.formatUnderline.Location = new System.Drawing.Point(388, 50);
             this.formatUnderline.Name = "formatUnderline";
             this.formatUnderline.Size = new System.Drawing.Size(22, 23);
             this.formatUnderline.TabIndex = 16;
@@ -274,7 +262,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(203, 55);
+            this.label3.Location = new System.Drawing.Point(247, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 21;
@@ -283,7 +271,7 @@
             // tbFontSize
             // 
             this.tbFontSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFontSize.Location = new System.Drawing.Point(259, 50);
+            this.tbFontSize.Location = new System.Drawing.Point(303, 50);
             this.tbFontSize.Name = "tbFontSize";
             this.tbFontSize.Size = new System.Drawing.Size(36, 24);
             this.tbFontSize.TabIndex = 22;
@@ -312,7 +300,6 @@
             this.Controls.Add(this.formatUnderline);
             this.Controls.Add(this.formatItalic);
             this.Controls.Add(this.formatBold);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -348,7 +335,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button formatBold;
         private System.Windows.Forms.Button formatItalic;
         private System.Windows.Forms.Button formatUnderline;
