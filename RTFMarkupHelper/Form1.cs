@@ -12,9 +12,14 @@ namespace RTFMarkupHelper
 {
 	public partial class Form1 : Form
 	{
-		public Form1()
+
+        RichTextStripper rtfStrip;
+
+        public Form1()
 		{
 			InitializeComponent();
+
+            rtfStrip = new RichTextStripper();
 						
 			string w_file = "RTFMarkupHelper.exe";
 			string w_directory = System.IO.Directory.GetCurrentDirectory();
@@ -263,5 +268,16 @@ namespace RTFMarkupHelper
 			if (fontSize <= 0) return;
 			rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, fontSize);
 		}
-	}
+
+        private void button6_Click_1(object sender, EventArgs e) {
+
+            String rtfMarkupExcerpt = rtfStrip.StripRichTextFormat(rtfBox.Rtf); // rtfBox.Text.Substring(rtfBox.SelectionStart, rtfBox.SelectionLength);
+
+            MessageBox.Show(
+                "SelectedRTF:\n" + rtfBox.SelectedRtf + 
+                "\nLength:\n" + rtfBox.SelectionLength +
+                "\nStart:\n" + rtfBox.SelectionStart +
+                "\nRTF:\n" + rtfMarkupExcerpt);
+        }
+    }
 }
