@@ -51,18 +51,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbFontSize = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btTextDirection = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtfBox
@@ -294,6 +295,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btTextDirection);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.formatBold);
             this.panel1.Controls.Add(this.tbFontSize);
@@ -303,6 +305,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 34);
             this.panel1.TabIndex = 23;
+            // 
+            // btTextDirection
+            // 
+            this.btTextDirection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btTextDirection.Location = new System.Drawing.Point(250, 7);
+            this.btTextDirection.Name = "btTextDirection";
+            this.btTextDirection.Size = new System.Drawing.Size(84, 23);
+            this.btTextDirection.TabIndex = 20;
+            this.btTextDirection.Text = "Left-to-Right";
+            this.btTextDirection.UseVisualStyleBackColor = true;
+            this.btTextDirection.Click += new System.EventHandler(this.btTextDirection_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -327,33 +340,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(760, 506);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.insertSymbolC);
-            this.panel2.Controls.Add(this.insertSymbolR);
-            this.panel2.Controls.Add(this.insertSymbolTM);
-            this.panel2.Location = new System.Drawing.Point(3, 438);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 29);
-            this.panel2.TabIndex = 26;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(350, 438);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(407, 65);
-            this.panel3.TabIndex = 26;
-            // 
             // splitContainer1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.splitContainer1, 2);
@@ -371,6 +357,33 @@
             this.splitContainer1.SplitterDistance = 344;
             this.splitContainer1.TabIndex = 26;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoSize = true;
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(350, 438);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(407, 65);
+            this.panel3.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.insertSymbolC);
+            this.panel2.Controls.Add(this.insertSymbolR);
+            this.panel2.Controls.Add(this.insertSymbolTM);
+            this.panel2.Location = new System.Drawing.Point(3, 438);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(341, 29);
+            this.panel2.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,14 +400,14 @@
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +440,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button btTextDirection;
     }
 }
 

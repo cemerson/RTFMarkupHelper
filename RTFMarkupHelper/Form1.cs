@@ -13,13 +13,13 @@ namespace RTFMarkupHelper
 	public partial class Form1 : Form
 	{
 
-        RichTextStripper rtfStrip;
+		RichTextStripper rtfStrip;
 
-        public Form1()
+		public Form1()
 		{
 			InitializeComponent();
 
-            rtfStrip = new RichTextStripper();
+			rtfStrip = new RichTextStripper();
 						
 			string w_file = "RTFMarkupHelper.exe";
 			string w_directory = System.IO.Directory.GetCurrentDirectory();
@@ -28,11 +28,30 @@ namespace RTFMarkupHelper
 			lblVersion.Text = "RTF Markup Helper | Build: " + c3.ToString("yyyyMMdd") + "." + c3.ToString("HHmmss");
 
 		}
+		public static string TrimNewLines(string text)
+		{
+            //while (text.EndsWith(Environment.NewLine))
+            //{
+            //    text = text.Substring(0, text.Length - Environment.NewLine.Length);
+            //}
 
-		private void rtfBox_TextChanged(object sender, EventArgs e)
+            //while (text.Contains(Environment.NewLine))
+            //{
+            //    text = text.Substring(0, text.Length - Environment.NewLine.Length);
+            //}
+            // return text; // return text.Trim();
+            // return text.ToString().Trim(Environment.NewLine.ToCharArray());
+            // return text.Replace("\n\r", "");
+            text = text.Replace(System.Environment.NewLine, "");
+            text = text.Replace("} ", "}");
+            return text;
+
+        }
+
+        private void rtfBox_TextChanged(object sender, EventArgs e)
 		{
 			string rtfString = rtfBox.Rtf.ToString();
-			textBox.Text = rtfString; // DecodeEscapedCharacters(ConvertToRtf(rtfString));  //ConvertToRtf(rtfString); // rtfBox.Rtf.ToString();            
+			textBox.Text = TrimNewLines(rtfString); // DecodeEscapedCharacters(ConvertToRtf(rtfString));  //ConvertToRtf(rtfString); // rtfBox.Rtf.ToString();            
 			//GetRtfUnicodeEscapedString(rtfBox.Rtf.ToString());
 		   //  string myText = rtfBox.Rtf. File.ReadAllText(myFilePath, Encoding.Unicode);
 
@@ -144,6 +163,7 @@ namespace RTFMarkupHelper
 
 		private void button2_Click_1(object sender, EventArgs e)
 		{
+			textBox.Text = TrimNewLines(textBox.Text);
 			rtfBox.Rtf = textBox.Text;
 		}
 
@@ -175,47 +195,17 @@ namespace RTFMarkupHelper
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-
-            //////////string updatedRTFString;
-
-            //////////string fullRTFText = rtfBox.Rtf.ToString(); //.SelectedText;
-            //////////string fullRTFPlainText = rtfBox.Text;
-            //////////string rtfTextToSuperScript = rtfBox.SelectedText;            
-            //////////string rtfTextSuperScripted = @"\super " + rtfTextToSuperScript + @"\nosupersub ";
-
-            ////////////string updatedRTFText = fullRTFText.Replace(rtfTextToSuperScript, rtfTextSuperScripted);  //            
-            ////////////string updatedRTFPlainText = fullRTFText.Replace(rtfTextToSuperScript, rtfTextSuperScripted);  //            
-            //////////// rtfBox.Rtf = updatedRTFText;
-            //////////// rtfBox.Rtf = fullRTFText.Replace(fullRTFPlainText, updatedRTFPlainText);
-            //////////int selectedRTFTextPosition = rtfBox.SelectionStart;            
-            //////////int selectedRTFTextLength = rtfBox.SelectionLength;
-            //////////int selectedRTFTextPositionEnd = rtfBox.SelectionStart + selectedRTFTextLength;
-
-            //////////int updatedRTFSelectionLength = rtfTextSuperScripted.Length;
-            //////////int positionOfRTFTextAfterSuperScriptedText = selectedRTFTextPositionEnd + updatedRTFSelectionLength;
-
-            //////////string updatedRTFPlainText = fullRTFPlainText.Substring(0, selectedRTFTextPosition) + 
-            //////////                        rtfTextSuperScripted +
-            //////////                        fullRTFPlainText.Substring(selectedRTFTextPositionEnd);
-
-            ////////////updatedRTFText = fullRTFText.Substring(0, selectedRTFTextPosition) + rtfTextSuperScripted +
-            ////////////      fullRTFText.Substring(selectedRTFTextLength);
-
-            //////////// rtfBox.Rtf = updatedRTFText;
-            //////////string updatedRTFText = fullRTFText.Replace(fullRTFPlainText, updatedRTFPlainText);
-            //////////rtfBox.Rtf = updatedRTFText;
-
-
-            if (rtfBox.SelectionCharOffset > 0)
-            {
-                rtfBox.SelectionCharOffset = 0;
-                // rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size + 4);
-            }
-            else
-            {
-                rtfBox.SelectionCharOffset = 4;
-                // rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size - 4);
-            }
+			
+			if (rtfBox.SelectionCharOffset > 0)
+			{
+				rtfBox.SelectionCharOffset = 0;
+				// rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size + 4);
+			}
+			else
+			{
+				rtfBox.SelectionCharOffset = 4;
+				// rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, rtfBox.SelectionFont.Size - 4);
+			}
 			
 		}
 
@@ -269,15 +259,32 @@ namespace RTFMarkupHelper
 			rtfBox.SelectionFont = new Font(rtfBox.SelectionFont.FontFamily, fontSize);
 		}
 
-        private void button6_Click_1(object sender, EventArgs e) {
+		private void button6_Click_1(object sender, EventArgs e) {
 
-            String rtfMarkupExcerpt = rtfStrip.StripRichTextFormat(rtfBox.Rtf); // rtfBox.Text.Substring(rtfBox.SelectionStart, rtfBox.SelectionLength);
+			String rtfMarkupExcerpt = rtfStrip.StripRichTextFormat(rtfBox.Rtf); // rtfBox.Text.Substring(rtfBox.SelectionStart, rtfBox.SelectionLength);
 
-            MessageBox.Show(
-                "SelectedRTF:\n" + rtfBox.SelectedRtf + 
-                "\nLength:\n" + rtfBox.SelectionLength +
-                "\nStart:\n" + rtfBox.SelectionStart +
-                "\nRTF:\n" + rtfMarkupExcerpt);
-        }
-    }
+			MessageBox.Show(
+				"SelectedRTF:\n" + rtfBox.SelectedRtf + 
+				"\nLength:\n" + rtfBox.SelectionLength +
+				"\nStart:\n" + rtfBox.SelectionStart +
+				"\nRTF:\n" + rtfMarkupExcerpt);
+		}
+
+		private void btTextDirection_Click(object sender, EventArgs e)
+		{
+			var isRTL = rtfBox.RightToLeft.ToString();
+			if(isRTL.ToUpper() == "NO")
+			{                
+				rtfBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+				btTextDirection.Text = "Right-to-Left";
+			}
+			else
+			{
+				rtfBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+				btTextDirection.Text = "Left-to-Right";
+			}
+
+			rtfBox_TextChanged(null, null);
+		}
+	}
 }
